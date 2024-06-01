@@ -1,17 +1,24 @@
 import React, {useState} from 'react';
 import {food} from "../../types.ts";
-
+import imageShawurma from "../../assets/images/item_185.jpg"
+import imageDolma from "../../assets/images/Без названия.jpeg"
+import imageSalad from "../../assets/images/images (1).jpeg"
+import imageLagman from "../../assets/images/1-12.jpg"
+import imageSomsa from "../../assets/images/tandyrnaya-samsa-v-duxovke_1569242042_17_max.jpg"
+import imagePlov from "../../assets/images/img_0066_0.jpg"
+import imageTea from "../../assets/images/Без названия (1).jpeg"
+import imageCola from "../../assets/images/Без названия (2).jpeg"
 
 
 const menu: food[] = [
-    { name: 'Shawurma', price:220},
-    { name: 'Dolma', price: 300 },
-    { name: 'Salad', price: 120},
-    { name: 'Lagman', price: 270},
-    { name: 'Somsa', price: 65},
-    { name: 'Plov', price: 500},
-    { name: 'Tea', price: 20},
-    { name: 'Cola', price: 50,}
+    { name: 'Shawurma', price:220, image:imageShawurma},
+    { name: 'Dolma', price: 300, image: imageDolma},
+    { name: 'Salad', price: 120, image:imageSalad},
+    { name: 'Lagman', price: 270, image: imageLagman},
+    { name: 'Somsa', price: 65, image: imageSomsa},
+    { name: 'Plov', price: 500, image: imagePlov},
+    { name: 'Tea', price: 20, image: imageTea},
+    { name: 'Cola', price: 50, image:imageCola}
 ];
 
 
@@ -38,9 +45,9 @@ const Buttons = () => {
     console.log(food)
     return (
         <div>
-            {menu.map( food=> (
+            {menu.map( food => (
                 <div key={food.name} className="buttons">
-                    <button onClick={() => addFood(food.name)}>Add {food.name}</button>
+                    <button onClick={() => addFood(food.name)}>{food.name} <br/>{food.price} сом <img src={food.image} /></button>
                 </div>
             ))}
         </div>
