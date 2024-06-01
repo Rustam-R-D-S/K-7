@@ -1,8 +1,13 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+
   padding: 2rem;
   text-align: center;
+}
+body, html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 button{
@@ -13,4 +18,37 @@ button{
 img{
   width: 100px;
   height: 100px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+
+}
+.rightSide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 650px;
+  height: 650px;
+  border: 5px solid #7c7979;
+}
+leftSide div{
+  display: flex;
+  width: 600px;
+}
+text-empty{
+  width: 200px;
+}
+.count{
+  border-top: 5px solid #7c7979;
+}
+
+.leftSide{
+  border: 5px solid #7c7979;
+}
+.leftSide div{
+  border: 1px solid #7c7979;
+}
+.xbtn{
+  color: red;
 }
